@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html {
+            perspective: 800px;
+        }
+
+        .cude {
+            position: relative;
+            width: 1000px;
+            height: 1000px;
+            margin: 600px auto;
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateZ(45deg);
+            animation: run 15s infinite linear;
+        }
+
+        .cude > div {
+            width: 1000px;
+            height: 1000px;
+            transform: scale(0.5);
+            opacity: .7;
+            position: absolute;
+        }
+
+        .cude img {
+            vertical-align: middle;
+        }
+
+        .left {
+            transform: rotateY(90deg) translateZ(500px);
+            transition: all 0.5s;
+        }
+
+        .right {
+            transform: rotateY(-90deg) translateZ(500px);
+            transition: all 0.5s;
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(500px);
+            transition: all 0.5s;
+        }
+
+        .bottom {
+            transform: rotateX(-90deg) translateZ(500px);
+            transition: all 0.5s;
+        }
+        .front {
+            transform: rotateY(180deg) translateZ(500px);
+            transition: all 0.5s;
+        }
+
+        .behind {
+            transform: rotateY(0deg) translateZ(500px);
+            transition: all 0.5s;
+        }
+
+       .cude:hover .left {
+            transform: rotateY(90deg) translateZ(550px);
+        }
+
+        .cude:hover .right {
+            transform: rotateY(-90deg) translateZ(550px);
+        }
+        .cude:hover .top {
+            transform: rotateX(90deg) translateZ(550px);
+        }
+
+        .cude:hover .bottom {
+            transform: rotateX(-90deg) translateZ(550px);
+        }
+        .cude:hover .front {
+            transform: rotateY(180deg) translateZ(550px);
+        }
+
+        .cude:hover .behind {
+            transform: rotateY(0deg) translateZ(550px);
+        }
+        @keyframes run {
+            from{
+                transform: rotateX(0) rotateZ(0);
+            }
+            to{
+                transform: rotateX(1turn) rotateZ(1turn);
+            }
+        }
+
+        .left2 {
+            transform: rotateY(90deg) translateZ(237.5px);
+            transition: all 0.5s;
+        }
+
+        .right2 {
+            transform: rotateY(-90deg) translateZ(237.5px);
+            transition: all 0.5s;
+        }
+        .top2 {
+            transform: rotateX(90deg) translateZ(237.5px);
+            transition: all 0.5s;
+        }
+
+        .bottom2 {
+            transform: rotateX(-90deg) translateZ(237.5px);
+            transition: all 0.5s;
+        }
+        .front2 {
+            transform: rotateY(180deg) translateZ(237.5px);
+            transition: all 0.5s;
+        }
+
+        .behind2 {
+            transform: rotateY(0deg) translateZ(237.5px);
+            transition: all 0.5s;
+        }
+
+       .cude:hover .left2 {
+            transform: rotateY(90deg) translateZ(287.5px);
+        }
+
+        .cude:hover .right2 {
+            transform: rotateY(-90deg) translateZ(287.5px);
+        }
+        .cude:hover .top2 {
+            transform: rotateX(90deg) translateZ(287.5px);
+        }
+
+        .cude:hover .bottom2 {
+            transform: rotateX(-90deg) translateZ(287.5px);
+        }
+        .cude:hover .front2 {
+            transform: rotateY(180deg) translateZ(287.5px);
+        }
+
+        .cude:hover .behind2 {
+            transform: rotateY(0deg) translateZ(287.5px);
+        }
+
+        /* 爱心 */
+        .love {
+            display: flex;
+    /* display: grid; */
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: darkred;
+    background: linear-gradient(to bottom right, tomato, darkred);
+    perspective: 50vw;
+    overflow: hidden;
+}
+
+.loveChild {
+    position: relative;
+    font-size: 15vw;
+    line-height: 100vh;
+    filter: drop-shadow(0 0 5px tomato);
+    animation: spin 5s linear infinite;
+}
+
+.loveChild:before {
+    content: '';
+    width: 15vw;
+    height: 25vw;
+    background: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 150px 150px 0 0;
+    transform: translate(-74%, -50%) rotate(-45deg);
+    z-index: -1;
+}
+
+.loveChild:after {
+    content: '';
+    width: 15vw;
+    height: 25vw;
+    background: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 125px 125px 0 0;
+    transform: translate(-26%, -50%) rotate(45deg);
+    z-index: -1;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.loveLeft {
+    position: relative;
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <label for="ipt1">配置1</label>
+        <input style="width: 200px; height: 50px;" type="text" id="ipt1"/>
+    </div> -->
+
+
+<div class="love">
+    <div class="loveLeft">
+        <div class="cude">
+            <div class="left">
+                <img src="./public/QQ截图1.png" alt="">
+            </div>
+            <div class="right">
+                <img src="./public/QQ截图2.png" alt="">
+            </div>
+            <div class="top">
+                <img src="./public/QQ截图3.png" alt="">
+            </div>
+            <div class="bottom">
+                <img src="./public/QQ截图4.png" alt="">
+            </div>
+            <div class="front">
+                <img src="./public/QQ截图5.png" alt="">
+            </div>
+            <div class="behind">
+                <img src="./public/QQ截图6.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="loveChild">love</div>
+
+    <div class="loveRight">
+        <div class="cude">
+            <div class="left">
+                <img src="./public/QQ截图7.png" alt="">
+            </div>
+            <div class="right">
+                <img src="./public/QQ截图8.png" alt="">
+            </div>
+            <div class="top">
+                <img src="./public/QQ截图9.png" alt="">
+            </div>
+            <div class="bottom">
+                <img src="./public/QQ截图10.png" alt="">
+            </div>
+            <div class="front">
+                <img src="./public/QQ截图11.png" alt="">
+            </div>
+            <div class="behind">
+                <img src="./public/QQ截图12.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
